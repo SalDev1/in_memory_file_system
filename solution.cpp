@@ -349,9 +349,9 @@ void helpCommands()
     cout << "mkdir [dirName]" << endl;
     cout << "cd [dirName]" << endl;
     cout << "ls (Make sure you are at directory path first)" << endl;
-    cout << "touch [fileName] (Make sure you are at directory path first)" << endl;
-    cout << "cat [fileName] (Make sure you are at directory path first)" << endl;
-    cout << "echo [fileName] [text with no spaces] (Make sure you are at directory path first)" << endl;
+    cout << "touch [fileName] (Make sure you are at specific directory path first)" << endl;
+    cout << "cat [fileName] (Make sure you are at specific directory path first)" << endl;
+    cout << "echo [fileName] [text with no spaces] (Make sure you are at specific directory path first)" << endl;
     cout << "mv [sourcePath] [destinationPath]" << endl;
     cout << "cp [sourcePath] [destinationPath]" << endl;
     cout << "rm [filePath]" << endl;
