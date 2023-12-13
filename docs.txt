@@ -1,0 +1,93 @@
+I have built an In-Memory File System using C++.
+
+For an In-Memory File System , I have used a Data Structure called Hashmap where 
+it stores two most important things :
+
+The reason why I chose Hashmap because it reduces a lot of time creating and finding 
+directories and files.
+
+1] Directory Path 
+2] Map of Files related to the Directory Path. 
+
+So , for every directory / folder that we are going to maintain in this In-Memory File System , 
+we are going to store its file path in the hashmap , starting from the root directory itself ("/").
+
+Ex :- /documents  , /documents/data , etc.
+
+And for all the directories that exists , all files can be created , overwritten 
+and stored related to the specific directory we are currently at. 
+
+Ex :- data.txt , docs.txt , etc.
+
+This is what the Hashmap will look like if we run the program and run 
+the following commands :- 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ __ _ __ _ _ _ _ _ _ _ _
+|   Directory Path         |           Map Of Files        |
+|                          |                               |
+|    /documents            |     [file.txt , notes.txt]    |
+|   /documents/data        |     [file1.txt , notes1.txt]  |
+|                          |                               |
+| _ _ _ _ _ __ _ _ _ __ _ _| _ _ _ _ _ _ _ _ _ _ _ _ _ __ _|
+
+
+Let's explore all the specific commands and functions :- 
+
+1] mkdir :- Allowing you to create a new directory within the file system.
+Ex :- mkdir Documents , mkdir Data , etc
+
+Time Complexity :-  O(1).
+
+2] cd :- Changes or Switching to a specific directory according to your needs.
+Ex :- cd ..  ,  cd Documents
+
+Time Complexity :-  O(K) , k --> length of the string.
+
+3] ls :-  Displays the contents of the directory.
+(Before running this command , make sure that you are in a specific directory)
+Ex :- ls
+
+Time Complexity :- O(K) , k --> list / number of contents in a directory.
+
+4] cat :- Allows you to see the contents of a file in a specific directory.
+(Before running this command , make sure that you are in a specific directory)
+Ex :- cat imp1.txt , cat data1.txt
+
+Time Complexity :- O(1) 
+
+5] touch : Creates a empty file in a specific directory and adding "None" as the preinitialized text.
+(Before running this command , make sure that you are in a specific directory).
+Ex :- touch imp2.txt , touch data.txt
+
+Time Complexity :-  O(1).
+
+6] echo :- Writes text to a file. 
+(Before running this command , make sure that you are in a specific directory).
+Ex :- echo data.txt helloworld
+
+Time Complexity :-  O(1)
+
+7] mv :- Move a file or specific directory from one location to another.
+Ex :- mv /Documents/data.txt /Data  ,  mv /Documents/Data1 /Data
+
+Time Complexity :-  O(N) --> To check if we are moving a file or repository.
+
+8] cp :- Copying a file or specific directory from one location to another.
+Ex :- cp /Documents/data.txt /Data  ,  cp /Documents/Data1 /Data
+
+Time Complexity :-  O(N) --> To check if we are copying a file or repository.
+
+9] rm :- Remove a file or repository. 
+Ex :- rm /Documents , rm /Documents/imp.txt
+
+Time Complexity :- O(N) --> To check if we are removing a file or repository.
+
+I think the overall space complexity for the entire FileSystem class comes out to be 
+O(N) , as we are maintain a centrailized hashmap for each folder / directory and it's corresponding 
+files.
+
+*** To Run This Program ***:- 
+g++ solution.cpp 
+./a.exe
+
+AND YOU ARE ALL SET TO GO !
+
